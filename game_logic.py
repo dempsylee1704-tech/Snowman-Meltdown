@@ -41,7 +41,7 @@ def play_game():
             continue
 
         if guess in guessed_letters:
-            print(f"You already guessed with the letter {guess},"
+            print(f"You already guessed with the letter :{guess},"
                   f" try another letter")
             continue
 
