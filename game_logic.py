@@ -22,6 +22,7 @@ def display_game_state(mistakes, secret_word, guessed_letters):
             display_word += "_ "
     print("Word: ", display_word)
     print("\n")
+    print(f"Mistakes: {mistakes}/{len(ascii_art.STAGES) - 1}")
 
 
 def play_game():
@@ -31,6 +32,7 @@ def play_game():
 
     print("Welcome to Snowman Meltdown!")
     while True:
+        print("------------------")
         display_game_state(mistakes, secret_word, guessed_letters)
         guess = input("Guess a letter: ").lower()
 
@@ -44,6 +46,7 @@ def play_game():
         else:
             mistakes += 1
             print()
+            print("The snowman is melting!")
 
         word_complete = True
         for letter in secret_word:
