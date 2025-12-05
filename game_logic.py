@@ -33,6 +33,11 @@ def play_game():
     while True:
         display_game_state(mistakes, secret_word, guessed_letters)
         guess = input("Guess a letter: ").lower()
+
+        if len(guess) != 1 or not guess.isalpha():
+            print("Please enter only 1 letter")
+            continue
+
         if guess in secret_word:
             guessed_letters.append(guess)
             print("You guessed:", guess)
